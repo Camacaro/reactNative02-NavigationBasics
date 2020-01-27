@@ -6,6 +6,51 @@ $ npm install --save react-navigation-stack
 // Esta es 
 $ npm install react-navigation-stack @react-native-community/masked-view
 
+Stack Navigator Config - Navigation Options
+* title: Titulo en la parte de encima
+* header: Componente personalizado
+* headerTitle: Similar a title
+* headerAllowFontScaling: El font size se escala dependiendo el dispositivo
+* headerBackImage: La imagen para el botón de regresar, por default está una flecha
+* headerBackTitle: Texto que acompaña al botón de regresar
+* headerTruncateBackTitle: Un texto más corto en dado caso que el headerTitle no alcance el espacio
+* headerRight: Componente personalizado orientado a la derecha
+* headerLeft: Componente personalizado orientado a la izquierda
+* headerStyle: Estilos para el header
+* headerForceInset: Mover el header para arriba, abajo, izquierda
+* headerTitleStyle: Estilos al titulo
+* headerTintColor: Color del background del header
+* headerPressColorAndroid: Color del background del header al presionarlo
+* headerTransparent: Por si se necesita que el header sea transparente
+* headerBackground: Por si se necesita una imagen de fondo en el header
+* gesturesEnableb: Por si quieres que los gestos esten activados (por default iOS los tiene Android no)
+* gesturesResponseDistance: Para la sensibilidad al momento de arrastrar a otra pantalla
+* gesturesDirection: Por si se necesita invertir el cambio de dirección al cambiar de pantalla
+
+Parámetros de las configuraciones visuales de StackNavigator:
+* mode:
+* modal al cambiar de pantalla esta entra de abajo hacia arriba (por default en android)
+* card al cambiar de pantalla esta entra desde el costado(por default en iOS)
+* headerMode:
+* none, sin un header.
+* screenel header se mueve (default android).
+* float el header se queda fijo (default iOS).
+* headerTransitionPreset: animación en el header.
+* fade-in-place (alfa de 0 a 1).
+* uikit (el header se mueve y también cambia el alfa de 0 a 1).
+* cardStyle: Estilos para el componente que envuelve nuestra screen (backgroundColor, borders, etc).
+
+
+Stack Actions
+Algo que hemos venido usando es el navigation prop, que es la funcion que nos permite navegar. Veamos que otras opciones nos ofrece esta opción.
+
+.navigate(): Sirve para ir a otra pantalla de las rutas definidas.
+.goBack(): Es para movernos hacia atrás en la ruta.
+.addListener(): Para que puedas escuchar eventos dentro de la pantalla a la que estas llegando.
+.isFocused(): Retorna Verdadero o falso si estas o no en una pantalla.
+.state: retorna el key, la ruta, parametros.
+.setParams(): setear parametros.
+.dispatch() documentacion: https://reactnavigation.org/docs/en/stack-actions.html#push
 
 Erores de vscode
 eslint --init
