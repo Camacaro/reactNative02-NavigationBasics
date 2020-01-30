@@ -41,7 +41,7 @@ Parámetros de las configuraciones visuales de StackNavigator:
 * cardStyle: Estilos para el componente que envuelve nuestra screen (backgroundColor, borders, etc).
 
 
-Stack Actions
+Stack Actions - this.props.navigation.navigate()
 Algo que hemos venido usando es el navigation prop, que es la funcion que nos permite navegar. Veamos que otras opciones nos ofrece esta opción.
 
 .navigate(): Sirve para ir a otra pantalla de las rutas definidas.
@@ -52,5 +52,21 @@ Algo que hemos venido usando es el navigation prop, que es la funcion que nos pe
 .setParams(): setear parametros.
 .dispatch() documentacion: https://reactnavigation.org/docs/en/stack-actions.html#push
 
+StackActions:
+
+.push() Agrega una pantalla al Stack sin importar si ya estaba el Stack.
+.pop() Va a quitar el ultimo elemento del Stack.
+.popToTop() Va a quitar todos hasta quedar al primer elemento del Stack.
+.replace() Reemplaza los datos de un elemento del Stack.
+.reset() Reemplaza el estado actual con un nuevo estado (todo el Stack).
+
 Erores de vscode
 eslint --init
+
+
+Navigation Actions
+
+.navigate() - Navegar a otra ruta
+.back() - Volver a un estado previo
+.setParams() - Establecer parámetros para la ruta dada
+.init() - Se usa para inicializar el primer estado si el estado no está definido
